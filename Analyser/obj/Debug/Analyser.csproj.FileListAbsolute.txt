@@ -1,0 +1,5 @@
+C:\Bridgelabz-Ajay\Analyser\bin\Debug\Analyser.dll
+C:\Bridgelabz-Ajay\Analyser\bin\Debug\Analyser.pdb
+C:\Bridgelabz-Ajay\Analyser\obj\Debug\Analyser.csprojAssemblyReference.cache
+C:\Bridgelabz-Ajay\Analyser\obj\Debug\Analyser.dll
+C:\Bridgelabz-Ajay\Analyser\obj\Debug\Analyser.pdb
