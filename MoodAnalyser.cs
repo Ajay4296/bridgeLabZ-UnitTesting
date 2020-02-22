@@ -13,19 +13,27 @@ namespace Analyser
         {
                 this.msg = msg1;   
         }
-       public MoodAnalyser()
-        {
-
-        }
+      
 
 
             public  string analyseMood()
             {
+            try
+            {
                 if (msg.ToLower().Contains("sad"))
                 {
-                    return "SAD";
+                    return "sad";
                 }
-                    return "HAPPY";
+                else
+                    return "Happy";
+            }
+            catch(NullReferenceException ne)
+            {
+                return "Happy";
+                throw new NullReferenceException("happy mind");
+
+            }
+                    
             }
 
 
