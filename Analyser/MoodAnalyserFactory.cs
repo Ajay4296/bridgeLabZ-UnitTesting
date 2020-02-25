@@ -15,11 +15,20 @@ namespace Analyser
         {
                  return new MoodAnalyser();
         }
-        public static Object CreateObjectUsingReflaction()
+        public static Type CreateObjectUsingReflaction(string classname)
         {
-           
-                Type t = Type.GetType("Analyser.MoodAnalyser");
-                return t.FullName;
+            try
+            {
+                Type t = Type.GetType(classname);
+                if (t == null)
+                    throw new MoodAnalysisException("the exception present is :-" + Exception_type.No_such_Class_Exception);
+                return t;
+            }
+            catch(MoodAnalysisException e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
         }
     }
 }

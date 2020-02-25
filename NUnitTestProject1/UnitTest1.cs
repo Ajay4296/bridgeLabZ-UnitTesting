@@ -1,14 +1,18 @@
 using NUnit.Framework;
 using Analyser;
+using System.Reflection;
+using System;
+
 namespace NUnitTestProject1
 {
     public class Tests
     {
 
         /// <summary>
+        /// test cas
         /// Analyses the mood when null value.
         /// </summary>
-        [Test]
+     /*   [Test]
         public void AnalyseMood_WhenNullValue()
         {
             MoodAnalyser obj = new MoodAnalyser(null);
@@ -19,6 +23,7 @@ namespace NUnitTestProject1
 
 
         /// <summary>
+        /// 
         /// Analyses the mood when empty value.
         /// </summary>
         [Test]
@@ -40,23 +45,21 @@ namespace NUnitTestProject1
             string expected = "SAD";
             Assert.AreEqual(expected, obj.AnalyseMood());
 
-        }
+        }*/
         /// <summary>
+        /// Test_Case_4.2
         /// Reflections the test.
         /// </summary>
         [Test]
         public void ReflectionTest()
         {
+            string classname = "Analyser.MoodAnalyser";                
             MoodAnalyser MoodObject = MoodAnalyserFactory.CreateMoodAnalyser();
-            object obj = MoodAnalyserFactory.CreateObjectUsingReflaction();
-            bool actual = MoodObject.Equals(obj);
+            Type type = MoodAnalyserFactory.CreateObjectUsingReflaction(classname);
+            bool actual = MoodObject.Equals(type);
             bool expected = true;
             Assert.AreEqual(actual, expected);
         }
-
-
-
-
 
 
     }

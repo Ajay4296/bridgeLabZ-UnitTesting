@@ -88,8 +88,13 @@ namespace Analyser
         /// </returns>
         public override bool Equals(object obj)
         {
-            if (this.GetType().ToString().Equals(obj))
-                return true;
+                if (obj == null)
+                {
+                    return false;
+                }
+                Type type = (Type)obj;
+                if (this.GetType().ToString().Equals(type.FullName))
+                    return true;
             return false;
         }
 
