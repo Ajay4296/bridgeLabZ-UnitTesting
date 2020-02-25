@@ -73,11 +73,11 @@ namespace Analyser
         /// Creates the mood analyser using reflection.
         /// </summary>
         /// <returns></returns>
-        public static Object CreateMoodAnalyserUsingReflection(string classname)
+      /*  public static Object CreateMoodAnalyserUsingReflection(string classname)
         {
             Type type = Type.GetType(classname);
             return type.FullName;
-        }
+        }*/
 
         /// <summary>
         /// Determines whether the specified <see cref="System.Object" />, is equal to this instance.

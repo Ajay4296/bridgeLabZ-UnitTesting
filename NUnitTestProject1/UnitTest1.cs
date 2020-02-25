@@ -33,7 +33,7 @@ namespace NUnitTestProject1
         /// <summary>
         /// Analyses the mood when sad mood should returnsad.
         /// </summary>
-/        [Test]
+       [Test]
         public void AnalyseMood_WhenSadMoodShouldReturnsad()
         {
             MoodAnalyser obj = new MoodAnalyser("I am in sad mood");
@@ -45,10 +45,10 @@ namespace NUnitTestProject1
         /// Reflections the test.
         /// </summary>
         [Test]
-        /public void ReflectionTest()
+        public void ReflectionTest()
         {
             MoodAnalyser MoodObject = MoodAnalyserFactory.CreateMoodAnalyser();
-            object obj = MoodAnalyser.CreateMoodAnalyserUsingReflection("Analyser.MoodAnalyser");
+            object obj = MoodAnalyserFactory.CreateObjectUsingReflaction();
             bool actual = MoodObject.Equals(obj);
             bool expected = true;
             Assert.AreEqual(actual, expected);

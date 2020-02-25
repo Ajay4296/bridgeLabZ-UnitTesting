@@ -15,5 +15,11 @@ namespace Analyser
         {
                  return new MoodAnalyser();
         }
+        public static Object CreateObjectUsingReflaction()
+        {
+           
+                Type t = Type.GetType("Analyser.MoodAnalyser");
+                return t.FullName;
+        }
     }
 }
