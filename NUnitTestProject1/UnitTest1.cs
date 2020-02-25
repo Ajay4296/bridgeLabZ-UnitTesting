@@ -5,6 +5,9 @@ namespace NUnitTestProject1
     public class Tests
     {
 
+        /// <summary>
+        /// Analyses the mood when null value.
+        /// </summary>
         [Test]
         public void AnalyseMood_WhenNullValue()
         {
@@ -15,7 +18,9 @@ namespace NUnitTestProject1
         }
 
 
-
+        /// <summary>
+        /// Analyses the mood when empty value.
+        /// </summary>
         [Test]
         public  void AnalyseMood_when_empty_value()
         {
@@ -25,7 +30,10 @@ namespace NUnitTestProject1
             
         }
 
-        [Test]
+        /// <summary>
+        /// Analyses the mood when sad mood should returnsad.
+        /// </summary>
+/        [Test]
         public void AnalyseMood_WhenSadMoodShouldReturnsad()
         {
             MoodAnalyser obj = new MoodAnalyser("I am in sad mood");
@@ -33,7 +41,18 @@ namespace NUnitTestProject1
             Assert.AreEqual(expected, obj.AnalyseMood());
 
         }
-
+        /// <summary>
+        /// Reflections the test.
+        /// </summary>
+        [Test]
+        /public void ReflectionTest()
+        {
+            MoodAnalyser MoodObject = MoodAnalyserFactory.CreateMoodAnalyser();
+            object obj = MoodAnalyser.CreateMoodAnalyserUsingReflection("Analyser.MoodAnalyser");
+            bool actual = MoodObject.Equals(obj);
+            bool expected = true;
+            Assert.AreEqual(actual, expected);
+        }
 
 
 
