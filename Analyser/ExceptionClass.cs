@@ -19,6 +19,15 @@ namespace Analyser
         {
 
         }
+        public override string Message
+        {
+            get
+            {
+                return null;
+            }
+        }
+
     }
+
 
 }
